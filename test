@@ -1,4 +1,27 @@
-(function loadContainerTab() {
-    const containerUrl = "https://www.recraft.ai/projects"; // Your base URL without the query string
-    window.location.href = containerUrl; // Load the link in the current tab
-})();
+// Create a new button element
+let button = document.createElement("button");
+
+// Set the button text
+button.innerHTML = "Click to load project";
+
+// Style the button (optional)
+button.style.position = "fixed";
+button.style.top = "50%";
+button.style.left = "50%";
+button.style.transform = "translate(-50%, -50%)";
+button.style.padding = "10px 20px";
+button.style.fontSize = "16px";
+button.style.backgroundColor = "#4CAF50";
+button.style.color = "white";
+button.style.border = "none";
+button.style.borderRadius = "5px";
+button.style.cursor = "pointer";
+
+// Append the button to the body
+document.body.appendChild(button);
+
+// Add a click event listener to the button
+button.addEventListener("click", function() {
+    // Redirect the browser to the specified URL
+    window.location.href = "https://www.recraft.ai/projects";
+});
